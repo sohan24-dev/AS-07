@@ -34,7 +34,7 @@ const Footer = () => {
                     />
                 </div>
                 <hr /> 
-                <div className='flex justify-between items-center'>
+                <div className='flex flex-col justify-between sm:flex-row items-center space-y-4 sm:space-y-0'>
                     <p>@ 2026 keenKeeper. All rights reserved </p>
                     <div className='flex gap-5'>
                         <p>Privacy Policy</p>

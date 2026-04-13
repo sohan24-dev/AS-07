@@ -2,8 +2,8 @@
 
 const Count = () => {
     return (
-        <div>
-            <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="container mx-auto">
+            <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-4 py-7">
                 <div className="border p-6 rounded-lg shadow-md text-center">
 
                     <p className="text-lg font-semibold">
@@ -49,6 +49,7 @@ const Count = () => {
 
                 </div>
             </div>
+            <hr />
         </div>
     );
 };
