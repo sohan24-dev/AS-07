@@ -36,9 +36,13 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <main>
           <Providers>
-            <Navber></Navber>
-            {children}
-            <Footer></Footer>
+            <div className="min-h-screen flex flex-col">
+              <Navber></Navber>
+             <div className="flex-1 items-center justify-center ">
+               {children}
+             </div>
+              <Footer></Footer>
+            </div>
           </Providers>
           <ToastContainer />
         </main>

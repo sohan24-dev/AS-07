@@ -26,7 +26,7 @@ const ContactData = ({ person, type, children }) => {
   };
 
   return (
-    <button onClick={handleAction}>
+    <button onClick={handleAction} className="cursor-pointer">
       {children}
     </button>
   );
