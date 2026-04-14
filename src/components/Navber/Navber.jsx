@@ -15,7 +15,7 @@ const Navber = () => {
             <Link href="/timeline"><MdAccessTime /> Timeline</Link>
         </li>
         <li>
-            <Link href="/"><ImStatsDots /> Static</Link>
+            <Link href="/static"><ImStatsDots /> Static</Link>
         </li>
     </>
     return (

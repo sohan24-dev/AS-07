@@ -39,8 +39,8 @@ const Cart = () => {
                                 height={20}
                             />
 
-                            <div><p className="font-medium text-lg">
-                                {item.type} with{" "}
+                            <div><p className="">
+                                <span className='font-medium text-lg'>{item.type}</span> with{" "}
                                 {item.person.name}
                             </p>
                                 <p className="text-sm text-gray-500">
