@@ -1,4 +1,6 @@
-[
+import Image from "next/image";
+
+const FrData = [
   {
     "id": 1,
     "name": "Sohan",
@@ -66,7 +68,7 @@
   },
   {
     "id": 6,
-    "name": "Farhan ",
+    "name": "Farhan Chowdhury",
     "picture": "https://i.ibb.co.com/3yWCfbgh/1710260445594-2.jpg",
     "email": "farhana.chowdhury@example.com",
     "days_since_contact": 1,
@@ -130,3 +132,106 @@
     "location": "Farmgate, Dhaka"
   }
 ]
+
+
+
+const FriendsData = async ({ params }) => {
+  const { friends } = await params
+  const find = FrData.find(blog => blog.id === parseInt(friends))
+  const { name, picture, days_since_contact, tags, status, bio, email, next_due_date, goal } = find
+  return (
+    <div className="container mx-auto my-6">
+      {
+        find && <div className="grid  md:grid-cols-9 gap-5">
+          <div className=" md:col-span-3 space-y-4">
+            <div className="mx-auto space-y-3 shadow-xl bg-white p-7 w-full rounded-2xl text-center">
+              <div className="w-25 h-25 overflow-hidden mx-auto rounded-full">
+                <Image
+                  src={picture}
+                  width={100}
+                  height={100}
+                  alt={name}
+                  className="rounded-full object-cover"
+                />
+              </div>
+              <h3>{name}</h3>
+              <div>
+                <p className="bg-red-400 inline-block px-2 py-1 rounded-xl">
+                  {status}
+                </p>
+              </div>
+              <div className="flex justify-center items-center gap-1">
+                {tags.map((tag, index) => (
+                  <p className="bg-green-300 py-1 px-3 rounded-2xl " key={index}>{tag}</p>
+                ))}
+              </div>
+              <p>{bio}</p>
+              <p>Preferred: {email}</p>
+
+            </div>
+            <div className="py-2 px-3 bg-white shadow">
+              <button>Soonze 2 Weeks</button>
+            </div>
+            <div className="py-2 px-3 bg-white shadow">
+              <button>Archive</button>
+            </div>
+            <div className="py-2 px-3 bg-white shadow">
+              <button>Delete</button>
+            </div>
+          </div>
+          <div className="md:col-span-6 space-y-4">
+            <div className="grid grid-cols-3 gap-5">
+              <div className="bg-white shadow py-2 px-3 text-center rounded-xl">
+
+                <p className="text-2xl font-medium">{days_since_contact}</p>
+                <p>Days Since Contact</p>
+
+              </div>
+              <div className="bg-white shadow py-2 px-3 text-center rounded-xl">
+
+                <p className="text-2xl font-medium">{goal}</p>
+                <p>Goal(Days)</p>
+
+              </div>
+              <div className="bg-white shadow py-2 px-3 text-center rounded-xl">
+
+                <p className="text-2xl font-medium">{next_due_date}</p>
+                <p>Next Due</p>
+              </div>
+            </div>
+            <div>
+              <div className="bg-white py-4 px-5 shadow flex justify-between rounded-xl">
+                <div>
+                  <p>RelationShip Goal </p>
+                  <p>Connect every <span className="text-xl font-medium">{goal} days</span></p>
+                </div>
+                <div>
+                  <button className="btn">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white shadow py-4 px-6 rounded-xl">
+              <p className="text-green-700">Quick Check -in</p>
+              <div className="grid grid-cols-3 gap-3 text-center py-3"> 
+                <div className="bg-[#E9E9E9] py-3">
+                  <p>call</p>
+                  <p>call</p>
+                </div>
+                <div className="bg-[#E9E9E9] py-3">
+                  <p>call</p>
+                  <p>text</p>
+                </div>
+                <div className="bg-[#E9E9E9] py-3">
+                  <p>call</p>
+                  <p>Video</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  );
+};
+
+export default FriendsData;
