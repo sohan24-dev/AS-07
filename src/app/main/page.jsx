@@ -1,9 +1,11 @@
 import MainData from "@/components/MainData/MainData";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 const Data = async () => {
-  const res = await fetch("/data.json");
-  const data = await res.json();
-  return data
+  const filePath = path.join(process.cwd(), "public",  "data.json");
+  const friendsData = JSON.parse(await readFile(filePath, "utf-8"));
+  return friendsData
 }
 
 
