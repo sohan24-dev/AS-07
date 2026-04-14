@@ -13,9 +13,11 @@ const typeIcons = {
 import { AllDataCollect } from "@/components/context/AllData";
 import Image from "next/image";
 import { useContext } from "react";
+import EmptyCart from '@/components/Contact/EmptyCart';
 
 const Cart = () => {
     const { CollectData } = useContext(AllDataCollect);
+    const isEmpty = CollectData.length === 0;
 
     return (
         <div>
@@ -28,28 +30,35 @@ const Cart = () => {
                         <li><a>Item 2</a></li>
                     </ul>
                 </div>
-                {CollectData.map((item, index) => (
-                    <div key={index} className="bg-white py-3 px-4 rounded-2xl">
+                {
+                    isEmpty ? (
+                        <EmptyCart />
+                    ) : (
+                        CollectData.map((item, index) => (
+                            <div key={index} className="bg-white py-3 px-4 rounded-2xl">
+                                <div className='flex items-center gap-3'>
+                                    <Image
+                                        src={typeIcons[item.type]}
+                                        alt={item.type}
+                                        width={20}
+                                        height={20}
+                                    />
 
-                        <div className='flex items-center gap-3'>
-                            <Image
-                                src={typeIcons[item.type]}
-                                alt={item.type}
-                                width={20}
-                                height={20}
-                            />
+                                    <div>
+                                        <p>
+                                            <span className='font-medium text-lg'>{item.type}</span> with{" "}
+                                            {item.person.name}
+                                        </p>
 
-                            <div><p className="">
-                                <span className='font-medium text-lg'>{item.type}</span> with{" "}
-                                {item.person.name}
-                            </p>
-                                <p className="text-sm text-gray-500">
-                                    {new Date().toLocaleString()}
-                                </p></div>
-                        </div>
-
-                    </div>
-                ))}
+                                        <p className="text-sm text-gray-500">
+                                            {new Date().toLocaleString()}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    )
+                }
             </div>
         </div>
     );

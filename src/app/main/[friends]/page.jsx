@@ -1,8 +1,9 @@
 import ContactData from "@/components/contactData/contactData";
 import Image from "next/image";
-import { BsFillChatTextFill } from "react-icons/bs";
-import { IoCall } from "react-icons/io5";
-import { RiVideoOnAiFill } from "react-icons/ri";
+import video from '../../../assets/video.png'
+import text from '../../../assets/text.png'
+import call from '../../../assets/call.png'
+
 
 const FrData = [
   {
@@ -160,7 +161,16 @@ const FriendsData = async ({ params }) => {
               </div>
               <h3>{name}</h3>
               <div>
-                <p className="bg-red-400 inline-block px-2 py-1 rounded-xl">
+                <p
+                  className={`inline-block px-2 py-1 rounded text-white ${status === "overdue"
+                    ? "bg-red-400"
+                    : status === "on-track"
+                      ? "bg-green-400"
+                      : status === "almost due"
+                        ? "bg-yellow-400"
+                        : "bg-gray-400"
+                    }`}
+                >
                   {status}
                 </p>
               </div>
@@ -219,22 +229,37 @@ const FriendsData = async ({ params }) => {
               <div className="grid grid-cols-3 gap-3 text-center py-3">
 
                 <ContactData type="call" person={find}>
-                  <div className="bg-[#E9E9E9] py-3">
-                    <IoCall className="mx-auto"/>
+                  <div className="bg-[#E9E9E9] py-3 rounded-xl">
+                    <Image className="mx-auto pb-1.5"
+                      src={call}
+                      alt="callimg"
+                      width={20}
+                      height={20}
+                    />
                     <p>Call</p>
                   </div>
                 </ContactData>
 
                 <ContactData type="text" person={find}>
-                  <div className="bg-[#E9E9E9] py-3">
-                    <BsFillChatTextFill className="mx-auto" />
+                  <div className="bg-[#E9E9E9] py-3 rounded-xl">
+                    <Image className="mx-auto pb-1.5"
+                      src={text}
+                      alt="textimg"
+                      width={20}
+                      height={20}
+                    />
                     <p>Text</p>
                   </div>
                 </ContactData>
 
                 <ContactData type="video" person={find}>
-                  <div className="bg-[#E9E9E9] py-3">
-                    <RiVideoOnAiFill className="mx-auto" />
+                  <div className="bg-[#E9E9E9] py-3 rounded-xl">
+                    <Image className="mx-auto pb-1.5"
+                      src={video}
+                      alt="videoimg"
+                      width={20}
+                      height={20}
+                    />
                     <p>Video</p>
                   </div>
                 </ContactData>

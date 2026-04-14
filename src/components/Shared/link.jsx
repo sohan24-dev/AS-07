@@ -13,17 +13,17 @@ const Links = () => {
         <>
             <li>
                 <Link href="/" 
-                className={pathname === "/" ? "text-green-600 font-bold" : ""}
+                className={pathname === "/" ? "bg-green-700 text-white font-bold" : ""}
                 > <IoHome /> Home</Link>
             </li>
             <li>
                 <Link href="/timeline"
-                className={pathname === "/timeline" ? "text-green-600 font-bold" : ""}
+                className={pathname === "/timeline" ? "bg-green-700 text-white font-bold" : ""}
                 > <MdAccessTime /> Timeline</Link>
             </li>
             <li>
                 <Link href="/static"
-                className={pathname === "/static" ? "text-green-600 font-bold" : ""}
+                className={pathname === "/static" ? "bg-green-700 text-white font-bold" : ""}
                 > <ImStatsDots /> Static</Link>
             </li>
         </>

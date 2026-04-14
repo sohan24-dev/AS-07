@@ -25,7 +25,16 @@ const FriendsData = ({ frData }) => {
                     ))}
                 </div>
                 <div>
-                    <p className="bg-red-400 inline-block px-2 py-1 rounded">
+                    <p
+                        className={`inline-block px-2 py-1 rounded text-white ${status === "overdue"
+                                ? "bg-red-400"
+                                : status === "on-track"
+                                    ? "bg-green-400"
+                                    : status === "almost due"
+                                        ? "bg-yellow-400"
+                                        : "bg-gray-400"
+                            }`}
+                    >
                         {status}
                     </p>
                 </div>

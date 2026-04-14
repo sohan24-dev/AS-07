@@ -4,6 +4,7 @@ import Navber from "@/components/Navber/Navber";
 import Footer from "@/components/Footer/Footer";
 import { Roboto } from 'next/font/google'
 import Providers from "./lib/providers";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
             {children}
             <Footer></Footer>
           </Providers>
+          <ToastContainer />
         </main>
 
       </body>
