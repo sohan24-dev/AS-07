@@ -12,7 +12,7 @@ const Navber = () => {
                 <Link href="/"><IoHome /> Home</Link>
             </li>
         <li>
-            <Link href="/"><MdAccessTime /> Timeline</Link>
+            <Link href="/timeline"><MdAccessTime /> Timeline</Link>
         </li>
         <li>
             <Link href="/"><ImStatsDots /> Static</Link>

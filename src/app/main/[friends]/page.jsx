@@ -1,4 +1,8 @@
+import ContactData from "@/components/contactData/contactData";
 import Image from "next/image";
+import { BsFillChatTextFill } from "react-icons/bs";
+import { IoCall } from "react-icons/io5";
+import { RiVideoOnAiFill } from "react-icons/ri";
 
 const FrData = [
   {
@@ -212,19 +216,29 @@ const FriendsData = async ({ params }) => {
             </div>
             <div className="bg-white shadow py-4 px-6 rounded-xl">
               <p className="text-green-700">Quick Check -in</p>
-              <div className="grid grid-cols-3 gap-3 text-center py-3"> 
-                <div className="bg-[#E9E9E9] py-3">
-                  <p>call</p>
-                  <p>call</p>
-                </div>
-                <div className="bg-[#E9E9E9] py-3">
-                  <p>call</p>
-                  <p>text</p>
-                </div>
-                <div className="bg-[#E9E9E9] py-3">
-                  <p>call</p>
-                  <p>Video</p>
-                </div>
+              <div className="grid grid-cols-3 gap-3 text-center py-3">
+
+                <ContactData type="call" person={find}>
+                  <div className="bg-[#E9E9E9] py-3">
+                    <IoCall className="mx-auto"/>
+                    <p>Call</p>
+                  </div>
+                </ContactData>
+
+                <ContactData type="text" person={find}>
+                  <div className="bg-[#E9E9E9] py-3">
+                    <BsFillChatTextFill className="mx-auto" />
+                    <p>Text</p>
+                  </div>
+                </ContactData>
+
+                <ContactData type="video" person={find}>
+                  <div className="bg-[#E9E9E9] py-3">
+                    <RiVideoOnAiFill className="mx-auto" />
+                    <p>Video</p>
+                  </div>
+                </ContactData>
+
               </div>
             </div>
           </div>
