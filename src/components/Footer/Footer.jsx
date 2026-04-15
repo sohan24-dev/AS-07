@@ -8,7 +8,7 @@ import twi from '../../assets/twitter.png'
 
 const Footer = () => {
     return (
-        <div className="bg-[#244D3F]">
+        <div className="bg-[#244D3F] pb-8">
             <div className="container mx-auto text-center text-white space-y-4 py-8">
                 <h2 className="text-5xl font-bold ">KeenKeeper</h2>
                 <p className="">Your personal shelf of meaningful connections. Browse, tend,and nurture the relationships that matter most</p>
