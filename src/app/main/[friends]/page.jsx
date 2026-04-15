@@ -6,6 +6,7 @@ import call from '../../../assets/call.png'
 import { PiBellRingingBold } from "react-icons/pi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { HiArchiveBox } from "react-icons/hi2";
+import Recent from "@/components/Shared/Recent";
 
 
 const FrData = [
@@ -271,6 +272,8 @@ const FriendsData = async ({ params }) => {
                 </ContactData>
 
               </div>
+            </div>
+            <div className="md:col-span-6 space-y-4">              <Recent id={friends} />
             </div>
           </div>
         </div>
