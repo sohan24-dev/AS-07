@@ -3,6 +3,9 @@ import Image from "next/image";
 import video from '../../../assets/video.png'
 import text from '../../../assets/text.png'
 import call from '../../../assets/call.png'
+import { PiBellRingingBold } from "react-icons/pi";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { HiArchiveBox } from "react-icons/hi2";
 
 
 const FrData = [
@@ -184,13 +187,16 @@ const FriendsData = async ({ params }) => {
 
             </div>
             <div className="py-2 px-3 bg-white shadow">
-              <button>Soonze 2 Weeks</button>
+              <button> <div className="flex items-center gap-2">
+                <PiBellRingingBold /> Soonze 2 Weeks</div></button>
             </div>
             <div className="py-2 px-3 bg-white shadow">
-              <button>Archive</button>
+              <div className="flex items-center gap-2">
+                <HiArchiveBox /> Archive</div>
             </div>
             <div className="py-2 px-3 bg-white shadow">
-              <button>Delete</button>
+              <div className="flex items-center gap-2">
+                <RiDeleteBinLine /> Delete</div>
             </div>
           </div>
           <div className="md:col-span-6 space-y-4">
