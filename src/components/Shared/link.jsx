@@ -11,7 +11,7 @@ const Links = () => {
     console.log(pathname);
     return (
         <>
-            <li className="ml-7">
+            <li>
                 <Link href="/" 
                 className={pathname === "/" ? "bg-green-700 text-white font-bold" : ""}
                 > <IoHome /> Home</Link>
