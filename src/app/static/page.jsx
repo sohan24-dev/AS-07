@@ -23,7 +23,7 @@ const StaticPage = () => {
     ];
     return (
         <div className="max-w-4xl mx-auto py-8">
-            <h2 className="text-2xl font-bold">Friendship Analytics</h2>
+            <h2 className="text-4xl font-bold py-6">Friendship Analytics</h2>
             <div className="bg-white py-5 px-8 my-4">
                 <p>By interaction Type</p>
                 <div className="space-y-4">
