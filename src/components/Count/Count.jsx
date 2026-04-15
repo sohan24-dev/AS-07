@@ -4,7 +4,7 @@ const Count = () => {
     return (
         <div className="container mx-auto">
             <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-4 py-7">
-                <div className="border p-6 rounded-lg shadow-md text-center">
+                <div className="border p-6 border-[#E9E9E9] rounded-lg shadow-md text-center">
 
                     <p className="text-lg font-semibold">
                         10
@@ -15,7 +15,7 @@ const Count = () => {
                     </p>
 
                 </div>
-                <div className="border p-6 rounded-lg shadow-md text-center">
+                <div className="border p-6 border-[#E9E9E9] rounded-lg shadow-md text-center">
 
                     <p className="text-lg font-semibold">
                         3
@@ -26,7 +26,7 @@ const Count = () => {
                     </p>
 
                 </div>
-                <div className="border p-6 rounded-lg shadow-md text-center">
+                <div className="border p-6 border-[#E9E9E9] rounded-lg shadow-md text-center">
 
                     <p className="text-lg font-semibold">
                        6
@@ -37,7 +37,7 @@ const Count = () => {
                     </p>
 
                 </div>
-                <div className="border p-6 rounded-lg shadow-md text-center">
+                <div className="border border-[#E9E9E9] p-6 rounded-lg shadow-md text-center">
 
                     <p className="text-lg font-semibold">
                         12
@@ -49,7 +49,7 @@ const Count = () => {
 
                 </div>
             </div>
-            <hr />
+            <hr className="text-[#E9E9E9]" />
         </div>
     );
 };

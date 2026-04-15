@@ -7,6 +7,7 @@ const FriendsData = ({ frData }) => {
     const { days_since_contact, name, tags, status, picture } = frData
     return (
         <Link href={`/main/${frData.id}`}>
+            
             <div className="mx-auto space-y-3 shadow-xl bg-white p-7 w-full rounded-2xl flex flex-col">
                 <div className="w-25 h-25 overflow-hidden mx-auto rounded-full">
                     <Image
