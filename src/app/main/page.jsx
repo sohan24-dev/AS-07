@@ -1,4 +1,7 @@
 import MainData from "@/components/MainData/MainData";
+
+
+
 const Data = async () => {
   const res = await fetch("https://my-app-three-iota-45.vercel.app/data.json", {
     cache: 'no-store'
