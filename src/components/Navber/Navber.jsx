@@ -28,7 +28,7 @@ const Navber = () => {
 
                     </ul>
                 </div>
-                <ul className="menu menu-horizontal hidden sm:flex px-1">
+                <ul className="menu menu-horizontal gap-4 hidden sm:flex px-1">
                     <Links></Links>
                 </ul>
             </div>

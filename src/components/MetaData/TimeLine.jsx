@@ -32,36 +32,19 @@ const TimeLineCart = () => {
     return (
         <div>
             <div className="p-4 space-y-4 container mx-auto">
-                <h2 className="text-2xl font-bold">Timeline</h2>
-                <div className="dropdown dropdown-start">
-                    <div tabIndex={0} role="button" className="btn m-1 w-40 flex justify-between items-center"><p>Filter timeline</p> <GoArrowDown /></div>
-                    <ul className="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow-sm">
-
-                        <li>
-                            <button onClick={() => setFilter("all")}>
-                                All
-                            </button>
-                        </li>
-
-                        <li>
-                            <button onClick={() => setFilter("text")}>
-                                Text
-                            </button>
-                        </li>
-
-                        <li>
-                            <button onClick={() => setFilter("call")}>
-                                Call
-                            </button>
-                        </li>
-
-                        <li>
-                            <button onClick={() => setFilter("video")}>
-                                Video
-                            </button>
-                        </li>
-
-                    </ul>
+                <h2 className="text-4xl font-bold">Timeline</h2>
+                <div>
+                    <h4 className='font-semibold pb-3'>Filter type</h4>
+                    <select
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                        className="select"
+                    ><option disabled={true}>Filter type </option>
+                        <option value="all">All</option>
+                        <option value="text">Text</option>
+                        <option value="video">Video</option>
+                        <option value="call">Call</option>
+                    </select>
                 </div>
                 {
                     isEmpty ? (

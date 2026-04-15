@@ -11,14 +11,14 @@ const Links = () => {
     console.log(pathname);
     return (
         <>
-            <li>
+            <li className="ml-7">
                 <Link href="/" 
                 className={pathname === "/" ? "bg-green-700 text-white font-bold" : ""}
                 > <IoHome /> Home</Link>
             </li>
             <li>
                 <Link href="/timeline"
-                className={pathname === "/timeline" ? "bg-green-700 text-white font-bold" : ""}
+                className={pathname === "/timeline" ? "bg-green-700 text-white font-bold " : ""}
                 > <MdAccessTime /> Timeline</Link>
             </li>
             <li>
