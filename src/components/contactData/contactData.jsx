@@ -22,7 +22,7 @@ const ContactData = ({ person, type, children }) => {
     const newData = [...CollectData, { type, person }];
     setCollectData(newData);
 
-    // console.log(newData); 
+    console.log(newData); 
   };
 
   return (

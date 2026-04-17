@@ -187,16 +187,16 @@ const FriendsData = async ({ params }) => {
               <p>Preferred: {email}</p>
 
             </div>
-            <div className="py-2 px-3 bg-white shadow">
-              <button> <div className="flex items-center gap-2 font-semibold">
+            <div className="py-2 px-3 bg-white shadow text-center">
+              <button> <div className="flex items-center gap-2 font-semibold justify-center">
                 <PiBellRingingBold /> Soonze 2 Weeks</div></button>
             </div>
-            <div className="py-2 px-3 bg-white shadow">
-              <div className="flex items-center gap-2 font-semibold">
+            <div className="py-2 px-3 bg-white shadow text-center">
+              <div className="flex items-center gap-2 font-semibold justify-center">
                 <HiArchiveBox /> Archive</div>
             </div>
             <div className="py-2 px-3 bg-white shadow">
-              <div className="flex items-center gap-2 font-semibold text-red-600">
+              <div className="flex items-center gap-2 font-semibold text-red-600 justify-center">
                 <RiDeleteBinLine /> Delete</div>
             </div>
           </div>
@@ -273,7 +273,8 @@ const FriendsData = async ({ params }) => {
 
               </div>
             </div>
-            <div className="md:col-span-6 space-y-4">              <Recent id={friends} />
+            <div className="md:col-span-6 space-y-4">
+              <Recent id={friends} />
             </div>
           </div>
         </div>
